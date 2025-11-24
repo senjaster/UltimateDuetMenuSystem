@@ -42,43 +42,28 @@ button W42 V6 T"Abort" A"menu confirmAbort"
 ; Note: this section may need modified if you use different heater and fan numbers.
 image R11 C0 L"imgs/hline.img"
 
-; Bed Temp
-image R14 C25 L"imgs/bed.img"
-alter R14 C40 N180 W20 H2
-text T" / "
+; Line 1: Bed Temperature
+image R14 C10 L"imgs/bed.img"
+alter C25 N180 W20 H0
+text T"/"
 value N80 W20
-text T"°C"
+button C70 W22 T"Off" A"M140 S0"
 
-; Hotend Temp
-image R26 C25 L"imgs/temp.img"
-alter C40 N100 W20 H2
-text T" / "
+; Line 2: Hotend Temperature
+image R26 C10 L"imgs/temp.img"
+alter C25 N100 W20 H0
+text T"/"
 value N0 W20
-text T"°C"
+button C70 W22 T"Off" A"M568 P0 R0 S0 A0"
 
-; Fan Speed
-image R38 C25 L"imgs/fan.img"
-alter C52 N300 W25 H1
-button C80 F0 T"OFF" A"M106 P0 S0"
+; Line 3: Fan Speed and Flow Rate
+image R38 C10 L"imgs/fan.img"
+alter C25 N300 W25 H1
+image C65 L"imgs/flowrate.img"
+alter C80 N400 W25 H2
 
-
-; --------------- Scroll Button ---------------
-button R25 C104 F1 T" » " A"menu altMain"
-
-
-; --------------- Axis Positions ---------------
-image R53 C0 L"imgs/hline.img"
-
-;"Not Actively Printing" Commands
-text V5 R54 C15 F0 T"X "
-value V5 N510 W25
-text V5 T" Y "
-value V5 N511 W25
-text V5 T" Z "
-value V5 N512 D2 W30
-
-;"Actively Printing"
-value V4 R54 C4 W34 H0 N535 D0
-text V4 C46 T"Z "
-value V4 N512 D2
-value V4 C85 W40 H2 N536
+; Line 4: Print Speed and Babystepping
+image R50 C10 L"imgs/feedrate.img"
+alter C25 N500 W25 H2
+image C65 L"imgs/zstep.img"
+alter C80 D2 N521 W25 H2

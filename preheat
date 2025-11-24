@@ -47,11 +47,11 @@ button C106 W19 T"70" V3 A"M140 S70"
 
 ; --------------- Preheat Hotend ---------------
 image R27 C6 L"imgs/temp.img"
-button C23 W22 T"Off" A"G10 P0 S0"
-button C46 W19 T"130" A"G10 P0 S130"
-button C66 W19 T"200" A"G10 P0 S200"
-button C86 W19 T"210" A"G10 P0 S210"
-button C106 W19 T"230" A"G10 P0 S230"
+button C23 W22 T"Off" A"M568 P0 R0 S0 A0"
+button C46 W19 T"130" A"M568 P0 R130 S130 A2"
+button C66 W19 T"200" A"M568 P0 R200 S200 A2"
+button C86 W19 T"210" A"M568 P0 R215 S215 A2"
+button C106 W19 T"230" A"M568 P0 R230 S230 A2"
 
 
 ; --------------- Print Button---------------
