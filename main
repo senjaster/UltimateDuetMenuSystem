@@ -44,26 +44,28 @@ image R11 C0 L"imgs/hline.img"
 
 ; Line 1: Bed Temperature
 image R14 C10 L"imgs/bed.img"
-alter C25 N180 W20 H0
+alter C30 N180 W20 H2
 text T"/"
 value N80 W20
-button C70 W22 T"Off" A"M140 S0"
+text T"°C"
+button C85 W22 T"Off" A"M140 S0"
 
 ; Line 2: Hotend Temperature
 image R26 C10 L"imgs/temp.img"
-alter C25 N100 W20 H0
+alter C30 N100 W20 H2
 text T"/"
 value N0 W20
-button C70 W22 T"Off" A"M568 P0 R0 S0 A0"
+text T"°C"
+button C85 W22 T"Off" A"M568 P0 R0 S0 A0"
 
 ; Line 3: Fan Speed and Flow Rate
 image R38 C10 L"imgs/fan.img"
-alter C25 N300 W25 H1
-image C65 L"imgs/flowrate.img"
-alter C80 N400 W25 H2
+alter C25 N300 W25 H2
+image C75 L"imgs/flowrate.img"
+alter C90 N400 W25 H2
 
 ; Line 4: Print Speed and Babystepping
 image R50 C10 L"imgs/feedrate.img"
 alter C25 N500 W25 H2
-image C65 L"imgs/zstep.img"
-alter C80 D2 N521 W25 H2
+image C75 L"imgs/zstep.img"
+alter C90 D2 N521 W25 H2
